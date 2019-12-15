@@ -3,12 +3,16 @@ import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
+import PartSelection from './PartSelection';
+import './App.css';
 
+const testparts=['arm','leg','body','penis','head','neck','head','bicep'];
 class App extends React.Component{
   state = { videos: [], selectedVideo: null };
-
+   
+  
   componentDidMount(){
-    this.onTermSubmit('leggo');
+    this.onTermSubmit('body workout');
   };
 
   onTermSubmit = async (term) => {
@@ -28,9 +32,15 @@ class App extends React.Component{
     this.setState({selectedVideo:video});
   }
 
+ 
+
   render(){
     return(
       <div className='ui container'>
+        <h1 className='text-center pt-3'>Don's Dynamic Gym</h1> 
+        <div className='container'>
+        <PartSelection parts={testparts}/>
+        </div>
            <SearchBar onFormSubmit={this.onTermSubmit}/>
         <div className='ui grid'>
           <div className='ui row'>
