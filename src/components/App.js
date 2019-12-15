@@ -10,7 +10,7 @@ import './App.css';
 class App extends React.Component{
   state = { videos: [], 
     selectedVideo: null , 
-    bodyparts:['arm','leg','back','abs','head','neck','head','bicep']
+    bodyparts:['arm','chest','back','abs','leg','shoulders']
   };
    
   
@@ -35,14 +35,12 @@ class App extends React.Component{
     this.setState({selectedVideo:video});
   }
 
- 
-
   render(){
     return(
       <div className='ui container'>
         <h1 className='text-center pt-3'>Don's Dynamic Gym</h1> 
         <div className='container'>
-        <PartSelection bodyparts={this.state.bodyparts}/>
+        <PartSelection onTermSubmit={this.onTermSubmit} bodyparts={this.state.bodyparts}/>
         </div>
            <SearchBar onFormSubmit={this.onTermSubmit}/>
         <div className='ui grid'>

@@ -1,11 +1,14 @@
+import './PartItem.css'
 import React from 'react';
 
-const PartItem = ({bodypart}) => {
+const PartItem = ({bodypart,onTermSubmit}) => {
 
+const bodyImg= `/img/${bodypart}.png`;
+const bodyTerm=`${bodypart} workout`;
 
-    // let imgurl='/img/player0'+selPlayer.playerId+'.jpg'
 return(
-    <div className='col-3 text-center'>{bodypart}</div>
+    <div className='col-4 text-center part-item' ><img className='img-fluid' src={bodyImg} onClick={()=>onTermSubmit(bodyTerm)} alt={bodypart}/>
+    </div>
 )
 }
 
