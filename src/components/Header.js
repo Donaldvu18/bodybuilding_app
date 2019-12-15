@@ -4,7 +4,7 @@ const Header = () => {
     return(
         <div className='header-don'>
         <h1 className='text-center pt-3'>Ready for the Don Fitness Plan?</h1> 
-        <p className='text-center'>Select a body part and then scroll down!  <br/>You may search for a specific muscle as well!</p>
+        <p className='text-center'>Select a body part and then scroll down!  <br/>You may also search for a specific muscle!</p>
         </div>
     );
 };

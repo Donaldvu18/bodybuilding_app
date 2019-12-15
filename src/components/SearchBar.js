@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
                     <div className='field' >
                         {/* <label >If not shown above, search for it in the box below!</label> */}
                         <input type='text'
-                        placeholder='Type in a muscle you want to workout!' 
+                        placeholder='Search for a muscle you want to workout!' 
                         value={this.state.term}
                         onChange={this.onInputChange}
                         />
