@@ -1,6 +1,7 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
+import google from '../apis/google';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import PartSelection from './PartSelection';
@@ -11,7 +12,8 @@ import './App.css';
 class App extends React.Component{
   state = { videos: [], 
     selectedVideo: null , 
-    bodyparts:['arms','chest','back','abs','legs','shoulders']
+    bodyparts:['arms','chest','back','abs','legs','shoulders'],
+    googleResults:[]
   };
    
   middle = React.createRef();
@@ -23,6 +25,7 @@ class App extends React.Component{
   onTermSubmit = term =>{
     this.onRequestAPI(term);
     this.middle.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    this.onGoogleAPI();
   };
 
   onRequestAPI = async (term) => {
@@ -37,6 +40,19 @@ class App extends React.Component{
     });
 
   };
+
+  // onGoogleAPI = async () => {
+  //   const response = await google.get('/nearbysearch/json',{
+  //     params:{
+  //       location:'-33,151'
+  //     }
+  //   });
+  //   console.log(response);
+  //   // this.setState({videos : response.data.items,
+  //   //   selectedVideo:response.data.items[0]
+  //   // });
+
+  // };
 
   onVideoSelect = (video) => {
     this.setState({selectedVideo:video});
