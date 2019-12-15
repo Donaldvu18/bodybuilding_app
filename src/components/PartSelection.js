@@ -7,7 +7,7 @@ const PartSelection = ({bodyparts,onTermSubmit}) => {
     })
 
     return(
-        <div className='row '>
+        <div className='row'>
             {renderedPanel}
         </div>
     )

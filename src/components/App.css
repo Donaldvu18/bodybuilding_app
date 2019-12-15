@@ -23,3 +23,17 @@ body{
     max-width:70%;
 }
 
+.ui.segment.search-bar{
+    margin-top:2rem;
+    margin-bottom:2rem;
+    padding-bottom:2rem;
+    padding-top:.8rem;
+
+}
+
+.ui.form .field>label{
+color:white;
+font-size:1.2rem;
+padding:.5rem;
+}
+

@@ -1,6 +1,6 @@
 .part-item{
-    max-height:150px;
-    margin-bottom:2rem;
+    max-height:250px;
+    margin-bottom:3rem;
     padding:2rem;
     
     
@@ -17,8 +17,8 @@
     -webkit-transition: all 1s;
 }
 
-.part-item img:hover:after {
-    opacity: 1;
+.part-item img:hover {
+    opacity: 80%;
 }
 
 .part-item img{

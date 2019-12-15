@@ -42,7 +42,9 @@ class App extends React.Component{
         <div className='container'>
         <PartSelection onTermSubmit={this.onTermSubmit} bodyparts={this.state.bodyparts}/>
         </div>
+        <div>
            <SearchBar onFormSubmit={this.onTermSubmit}/>
+           </div>
         <div className='ui grid'>
           <div className='ui row'>
             <div className='ten wide column'>
