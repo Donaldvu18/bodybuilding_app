@@ -11,7 +11,7 @@ import './App.css';
 class App extends React.Component{
   state = { videos: [], 
     selectedVideo: null , 
-    bodyparts:['arm','chest','back','abs','leg','shoulders']
+    bodyparts:['arms','chest','back','abs','legs','shoulders']
   };
    
   
