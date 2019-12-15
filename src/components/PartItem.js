@@ -8,6 +8,7 @@ const bodyTerm=`${bodypart} workout`;
 
 return(
     <div className='col-4 text-center part-item' ><img className='img-fluid' src={bodyImg} onClick={()=>onTermSubmit(bodyTerm)} alt={bodypart}/>
+    <p className='bodylabel'>{bodypart}</p>
     </div>
 )
 }

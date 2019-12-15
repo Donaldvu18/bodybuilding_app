@@ -5,6 +5,7 @@ import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import PartSelection from './PartSelection';
 import Footer from './Footer';
+import Header from './Header';
 import './App.css';
 
 class App extends React.Component{
@@ -37,8 +38,8 @@ class App extends React.Component{
 
   render(){
     return(
-      <div className='ui container'>
-        <h1 className='text-center pt-3'>Don's Dynamic Gym</h1> 
+      <div className='container'>
+        <Header/>
         <div className='container'>
         <PartSelection onTermSubmit={this.onTermSubmit} bodyparts={this.state.bodyparts}/>
         </div>
@@ -48,7 +49,7 @@ class App extends React.Component{
         <div className='ui grid'>
           <div className='ui row'>
             <div className='ten wide column'>
-            <VideoDetail video={this.state.selectedVideo}/>
+            <VideoDetail id='middle' video={this.state.selectedVideo}/>
             </div>
     <div className='six wide column'>
         <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos}/>

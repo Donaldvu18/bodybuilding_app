@@ -7,8 +7,16 @@ body{
     color:white;
 }
 
-.header{
-    color:white;
+.header-don h1{
+    /* color:white; */
+    font-size:5rem;
+    margin-bottom:1.5rem;
+}
+
+.header-don{
+    /* color:white; */
+    font-size:2rem;
+    margin-bottom:2rem;
 }
 
 .page-footer {
@@ -19,15 +27,16 @@ body{
     
 }
 
-.ui.container{
-    max-width:70%;
+container{
+    max-width:60%;
 }
 
 .ui.segment.search-bar{
-    margin-top:2rem;
+    margin-top:.6rem;
     margin-bottom:2rem;
-    padding-bottom:2rem;
-    padding-top:.8rem;
+    padding-bottom:1.2rem;
+    padding-top:1.2rem;
+    /* background-color:rgb(83, 52, 52); */
 
 }
 
