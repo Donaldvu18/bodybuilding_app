@@ -4,15 +4,18 @@ import youtube from '../apis/youtube';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import PartSelection from './PartSelection';
+import Footer from './Footer';
 import './App.css';
 
-const testparts=['arm','leg','body','penis','head','neck','head','bicep'];
 class App extends React.Component{
-  state = { videos: [], selectedVideo: null };
+  state = { videos: [], 
+    selectedVideo: null , 
+    bodyparts:['arm','leg','back','abs','head','neck','head','bicep']
+  };
    
   
   componentDidMount(){
-    this.onTermSubmit('body workout');
+    this.onTermSubmit('bodybuilding');
   };
 
   onTermSubmit = async (term) => {
@@ -39,19 +42,20 @@ class App extends React.Component{
       <div className='ui container'>
         <h1 className='text-center pt-3'>Don's Dynamic Gym</h1> 
         <div className='container'>
-        <PartSelection parts={testparts}/>
+        <PartSelection bodyparts={this.state.bodyparts}/>
         </div>
            <SearchBar onFormSubmit={this.onTermSubmit}/>
         <div className='ui grid'>
           <div className='ui row'>
-            <div className='eleven wide column'>
+            <div className='ten wide column'>
             <VideoDetail video={this.state.selectedVideo}/>
             </div>
-    <div className='five wide column'>
+    <div className='six wide column'>
         <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos}/>
         </div>
         </div>
         </div>
+        <Footer/>
       </div>
       );
   }

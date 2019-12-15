@@ -1,9 +1,9 @@
 import React from 'react';
 import PartItem from './PartItem';
 
-const PartSelection = ({parts}) => {
-    const renderedPanel = parts.map(part => {
-        return <PartItem part={part}/>;
+const PartSelection = ({bodyparts}) => {
+    const renderedPanel = bodyparts.map(bodypart => {
+        return <PartItem bodypart={bodypart}/>;
     })
 
     return(

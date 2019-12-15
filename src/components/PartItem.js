@@ -1,9 +1,11 @@
 import React from 'react';
 
-const PartItem = ({part}) => {
+const PartItem = ({bodypart}) => {
 
+
+    // let imgurl='/img/player0'+selPlayer.playerId+'.jpg'
 return(
-    <div className='col-3 text-center'>{part}</div>
+    <div className='col-3 text-center'>{bodypart}</div>
 )
 }
 

@@ -2,8 +2,27 @@
     display:flex !important;
     align-items:center !important;
     cursor: pointer;
+    background: rgba(53, 52, 52, 0.7);
+    color:white;
 }
 
 .video-item.item img {
     max-width:180px;
 }
+
+.video-item {
+    color:white;
+}
+
+.ui.list .list>.item .header, .ui.list>.item .header{
+    color:white;
+}
+
+
+.video-item.item:hover{
+    opacity:50%;
+}
+
+/* .ui.image:hover{
+    opacity:70%;
+} */

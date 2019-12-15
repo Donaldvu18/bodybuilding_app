@@ -1,0 +1,25 @@
+body{
+    background: black url('/img/background3.png') no-repeat 0% 80%;
+    background-position:contain;
+    /* background-size:contain; */
+    background-attachment:fixed;
+    /* background-repeat:no-repeat; */
+    color:white;
+}
+
+.header{
+    color:white;
+}
+
+.page-footer {
+    min-height: 60px;
+    text-align:center;
+    margin-top:5rem;
+    /* padding:4px; */
+    
+}
+
+.ui.container{
+    max-width:70%;
+}
+
