@@ -14,12 +14,18 @@ class App extends React.Component{
     bodyparts:['arms','chest','back','abs','legs','shoulders']
   };
    
-  
+  middle = React.createRef();
+
   componentDidMount(){
     this.onTermSubmit('bodybuilding');
   };
 
-  onTermSubmit = async (term) => {
+  onTermSubmit = term =>{
+    this.onRequestAPI(term);
+    this.middle.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+  };
+
+  onRequestAPI = async (term) => {
     const response = await youtube.get('/search',{
       params:{
         q:term
@@ -35,7 +41,7 @@ class App extends React.Component{
   onVideoSelect = (video) => {
     this.setState({selectedVideo:video});
   }
-
+  
   render(){
     return(
       <div className='container'>
@@ -48,13 +54,17 @@ class App extends React.Component{
            </div>
         <div className='ui grid'>
           <div className='ui row'>
-            <div className='ten wide column'>
-            <VideoDetail id='middle' video={this.state.selectedVideo}/>
+            <div className='ten wide column' ref={this.middle}>
+            <VideoDetail  video={this.state.selectedVideo}/>
             </div>
     <div className='six wide column pr-0'>
         <VideoList onVideoSelect={this.onVideoSelect} videos={this.state.videos}/>
         </div>
         </div>
+        </div>
+
+        <div>
+          <h1 className='text-center m-4 mt-5'>Search for a gym nearby</h1>
         </div>
         <Footer/>
       </div>

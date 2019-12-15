@@ -40,10 +40,10 @@ container{
 }
 
 .ui.segment.search-bar{
-    margin-top:.6rem;
-    margin-bottom:2rem;
+    margin-top:2rem;
+    margin-bottom:2.5rem;
     padding-bottom:1.2rem;
-    padding-top:1.2rem;
+    /* padding-top:1.2rem; */
     /* background-color:rgb(83, 52, 52); */
 
 }
@@ -51,6 +51,6 @@ container{
 .ui.form .field>label{
 color:white;
 font-size:1.2rem;
-padding:.5rem;
+padding-bottom:.5rem;
 }
 

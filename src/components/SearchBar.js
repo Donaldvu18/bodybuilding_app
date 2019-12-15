@@ -18,9 +18,9 @@ class SearchBar extends React.Component {
             <div className='ui segment search-bar'>
                 <form onSubmit={this.onFormSubmit} className='ui form'>
                     <div className='field' >
-                        {/* <label >If not shown above, search for it in the box below!</label> */}
+                        <label >You may also search for a specific muscle!</label>
                         <input type='text'
-                        placeholder='Search for a muscle you want to workout!' 
+                        placeholder='Search for a muscle to workout' 
                         value={this.state.term}
                         onChange={this.onInputChange}
                         />
