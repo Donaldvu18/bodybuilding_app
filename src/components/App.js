@@ -13,19 +13,19 @@ class App extends React.Component{
   state = { videos: [], 
     selectedVideo: null , 
     bodyparts:['arms','chest','back','abs','legs','shoulders'],
-    googleResults:[]
   };
    
   middle = React.createRef();
-
+  begin = React.createRef();
   componentDidMount(){
     this.onTermSubmit('bodybuilding');
+    // this.begin.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
   };
 
   onTermSubmit = term =>{
     this.onRequestAPI(term);
     this.middle.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    this.onGoogleAPI();
+
   };
 
   onRequestAPI = async (term) => {
@@ -60,7 +60,7 @@ class App extends React.Component{
   
   render(){
     return(
-      <div className='container'>
+      <div className='container' ref={this.begin}>
         <Header/>
         <div className='container'>
         <PartSelection onTermSubmit={this.onTermSubmit} bodyparts={this.state.bodyparts}/>
