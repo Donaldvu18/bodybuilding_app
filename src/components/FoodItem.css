@@ -1,0 +1,10 @@
+.food-item {
+    display:flex !important;
+    align-items:center !important;
+}
+
+.foodlabel{
+    background-color:rgb(71, 45, 45);
+    text-transform: uppercase;
+    font-size:1.2rem;
+}

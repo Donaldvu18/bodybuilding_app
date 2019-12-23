@@ -5,8 +5,12 @@ body{
     background-attachment:fixed;
     /* background-repeat:no-repeat; */
     color:white;
+    
 }
 
+.don {
+    max-width:70%;
+}
 .header-don h1{
     /* color:white; */
     font-size:5rem;
@@ -35,9 +39,7 @@ body{
     
 }
 
-container{
-    max-width:60%;
-}
+
 
 .ui.segment.search-bar{
     margin-top:2rem;

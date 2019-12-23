@@ -1,18 +1,21 @@
 import React from 'react';
 import SearchBar from './SearchBar';
 import youtube from '../apis/youtube';
-import google from '../apis/google';
+import food from '../apis/food';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import PartSelection from './PartSelection';
 import Footer from './Footer';
 import Header from './Header';
+import Food from './Food';
+import FoodList from './FoodList';
 import './App.css';
 
 class App extends React.Component{
   state = { videos: [], 
     selectedVideo: null , 
     bodyparts:['arms','chest','back','abs','legs','shoulders'],
+    recipes:[]
   };
    
   middle = React.createRef();
@@ -41,6 +44,16 @@ class App extends React.Component{
 
   };
 
+  onFoodApi = async (term) => {
+    const response = await food.get('/search',{
+      params:{
+        query:term
+      }
+    });
+    
+    this.setState({recipes:response.data.results});
+
+  }
   // onGoogleAPI = async () => {
   //   const response = await google.get('/nearbysearch/json',{
   //     params:{
@@ -60,7 +73,7 @@ class App extends React.Component{
   
   render(){
     return(
-      <div className='container' ref={this.begin}>
+      <div className='container don' ref={this.begin}>
         <Header/>
         <div className='container'>
         <PartSelection onTermSubmit={this.onTermSubmit} bodyparts={this.state.bodyparts}/>
@@ -80,9 +93,14 @@ class App extends React.Component{
         </div>
 
         <div>
-          <h1 className='text-center m-4 mt-5'>Search for a gym nearby</h1>
+          <div className='header-don'>
+          <h1 className='text-center m-4 mt-5'>Diet and Nutrition</h1>
+          <h2 className='text-center m-4 my-5'>Type in an ingredient to find healthy recipes for it!</h2>
+          </div>
+          <Food onFoodApi={this.onFoodApi}/>
+          <FoodList recipes={this.state.recipes}/>
         </div>
-        <Footer/>
+        <Footer />
       </div>
       );
   }
