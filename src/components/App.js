@@ -93,8 +93,9 @@ class App extends React.Component{
         </div>
 
         <div>
+        <div class="divider div-transparent div-arrow-down mb-5"></div>
           <div className='header-don'>
-          <h1 className='text-center m-4 mt-5'>Diet and Nutrition</h1>
+          <h1 className='text-center m-4'>Diet and Nutrition</h1>
           <h2 className='text-center m-4 my-5'>Type in an ingredient to find healthy recipes for it!</h2>
           </div>
           <Food onFoodApi={this.onFoodApi}/>
