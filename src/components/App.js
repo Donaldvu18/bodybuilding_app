@@ -22,7 +22,9 @@ class App extends React.Component{
   begin = React.createRef();
   componentDidMount(){
     this.onTermSubmit('bodybuilding');
-    // this.begin.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    this.begin.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
+
+
   };
 
   onTermSubmit = term =>{
