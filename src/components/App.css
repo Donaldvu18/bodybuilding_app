@@ -16,9 +16,6 @@ body{
     font-size:5rem;
     margin-bottom:1.5rem;
 }
-.part-item img:hover {
-    opacity: 70%;
-}
 
 .header-don{
     /* color:white; */
