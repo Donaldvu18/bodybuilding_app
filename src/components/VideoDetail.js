@@ -1,4 +1,4 @@
-import './VideoDetail.css'
+import './VideoDetail.css';
 import React from 'react';
 
 const VideoDetail = ({video}) => {

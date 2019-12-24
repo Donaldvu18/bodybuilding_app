@@ -1,4 +1,4 @@
-import './PartItem.css'
+import './PartItem.css';
 import React from 'react';
 
 const PartItem = ({bodypart,onTermSubmit}) => {
