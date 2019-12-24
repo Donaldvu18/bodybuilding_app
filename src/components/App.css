@@ -16,6 +16,9 @@ body{
     font-size:5rem;
     margin-bottom:1.5rem;
 }
+.part-item img:hover {
+    opacity: 70%;
+}
 
 .header-don{
     /* color:white; */
@@ -56,15 +59,13 @@ font-size:1.2rem;
 padding-bottom:.5rem;
 }
 
-.divider
-{
+.divider{
 	position: relative;
 	margin-top: 90px;
 	height: 1px;
 }
 
-.div-transparent:before
-{
+.div-transparent:before{
 	content: "";
 	position: absolute;
 	top: 0;
@@ -75,8 +76,7 @@ padding-bottom:.5rem;
 	background-image: linear-gradient(to right, transparent, rgb(241, 244, 248), transparent);
 }
 
-.div-arrow-down:after
-{
+.div-arrow-down:after{
 	content: "";
 	position: absolute;
 	z-index: 1;
