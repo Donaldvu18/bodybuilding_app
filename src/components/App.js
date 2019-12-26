@@ -22,6 +22,7 @@ class App extends React.Component{
   begin = React.createRef();
   componentDidMount(){
     this.onTermSubmit('bodybuilding');
+    this.onFoodApi('salmon');
     this.begin.current.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
 
