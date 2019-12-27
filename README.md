@@ -1,3 +1,1 @@
-Site to help you with your bodybuilding aspirations.
-
-In development.
+Created a website where users can find workout videos and healthy recipes using the Youtube/Spoonacular API.
